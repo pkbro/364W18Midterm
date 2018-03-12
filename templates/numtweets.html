@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{{ url_for('numtweets') }}" method="POST">
+    {{ form.username.label() }}{{ form.username() }}<br>
+    {{ form.number_of_tweets.label() }}{{ form.number_of_tweets() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+
+<div>
+{% for message in get_flashed_messages() %}
+    <strong>{{ message }}</strong>
+{% endfor %}
+</div>
+
+{% endblock %}

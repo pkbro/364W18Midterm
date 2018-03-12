@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<ul>
+{% for t in list_tweets %}
+{% if t is sequence %}
+
+<li><b>User: </b><i>{{ t[3] }}</i> --- <b>Tweet: </b>{{ t[0] }} --- <b>Retweets:</b> {{ t[1] }} --- <b>Likes:</b> {{ t[2] }}</li><br>
+
+{% else %}
+<li>{{ t }}</li><br><br>
+{% endif %}
+{% endfor %}
+</ul>
+
+{% if not list_tweets %}
+<h1>No tweets to show.</h1>
+{% endif %}
+
+<div>
+{% for message in get_flashed_messages() %}
+<h3> {{ message }} </h3>
+{% endfor %}
+</div>
+
+
+{% endblock %}

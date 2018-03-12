@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Names of people who've used this application</h1>
+
+{% for name in name_l %}
+    <p>{{ name }}</p>
+{% endfor %}
+
+
+{% endblock %}

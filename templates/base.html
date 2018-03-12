@@ -1,0 +1,16 @@
+{% block content1 %}
+
+<p>**********</p>
+<h4>Links</h4>
+<p><a href="{{ url_for('home') }}">Home page</a></p>
+<p><a href="{{ url_for('user_name')}}">Go here to search for profile info on a public user</a></p>
+<p><a href="{{ url_for('numtweets')}}">Go here to search for tweets of a public user</a></p>
+<p><a href="{{ url_for('list_names') }}">See all people who have used this application</a></p>
+<p><a href="{{ url_for('list_tweets') }}">See all tweets</a></p>
+<p><a href="{{ url_for('list_users') }}">See all users</a></p>
+
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
